@@ -1,0 +1,156 @@
+nav{
+    background-color: transparent;
+    padding: 20px;
+    width: 100vw;
+    position: absolute;
+
+    .menu-btn{
+        position: absolute;
+        z-index: 1;
+        right: 30px;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        transition: 0.7s;
+
+        .burger{
+            position: absolute;
+            right: 0;
+            top: 5px;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            transition: 0.7s;
+
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: -8px;
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                transition: 0.7s;
+
+
+            }
+
+            &::after{
+                content: '';
+                position: absolute;
+                top: 8px;
+                width: 25px;
+                height: 2.5px;
+                background-color: white;
+                transition: 0.7s;
+
+            }
+
+            &.open{
+                transform: rotate(720deg);
+                background-color: transparent;
+
+                &::before{
+                    transform: rotate(45deg) translate(5px, 8px);
+                }
+
+                &::after{
+                    transform: rotate(-45deg) translate(3px, -7px);
+                }
+            }
+        }
+    }
+
+    .nav-items{
+        position: fixed;
+        top: 50px;
+        right: 30px;
+        background-color: white;
+        padding: 30px 80px;
+        z-index: 1;
+        text-align: center;
+        transform: translateX(500px);
+        transition: 1s;
+
+        li{
+            list-style: none;
+            margin-bottom: 20px;
+
+            a{
+                text-decoration: none;
+                color: hsl(210, 4%, 67%);
+                font-size: 26px;
+                font-weight: bolder;
+            
+            }
+
+         
+        }
+
+        .contact{
+            padding: 20px 30px;
+            background-color:  hsl(51, 100%, 49%);
+            border-radius: 40px;
+
+            a{
+                color: black;
+            }
+            
+        }
+
+        &.visible{
+            transform: translate(0);
+        }
+    }
+}
+
+@media (min-width: 820px){
+    nav{
+        
+        img{
+            position: absolute;
+            top: 50px;
+            left: 40px;
+            overflow: hidden;
+        }
+        .menu-btn{
+            display: none;
+        }
+
+        .nav-items{
+            display: flex;
+            transform: translate(0);
+            background-color: transparent;
+            position: absolute;
+            top: 0px;
+            align-items: center;
+            padding: 30px;
+
+            li{
+                margin: 0 0 0 50px;
+                
+                
+                a{
+                    color: white;
+                }
+            }
+
+            .contact{
+                background-color: white;
+
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.527);
+
+                    a{
+                        color: white;
+                    }
+                }
+
+               
+                
+            }
+
+        }
+    }
+}

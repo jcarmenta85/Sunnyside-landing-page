@@ -1,0 +1,73 @@
+.transform{
+    text-align: center;
+    padding: 40px;
+    background-color: hsl(0, 18%, 96%);
+
+    h1{
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+    p{
+        line-height: 22px;
+        color: hsl(232, 10%, 55%);
+        margin-bottom: 20px;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+        position: relative;
+    
+
+        &::after{
+            content: '';
+            background-color: hsla(51, 100%, 49%, 0.329);
+            width: 120px;
+            height: 8px;
+            position: absolute;
+            top: 13px;
+            left: -5px;
+            border-radius: 10px;
+
+        }
+        
+    }
+    .pink{
+        
+        &::after{
+            background-color: hsla(7, 99%, 70%, 0.397);
+        }
+    }
+}
+
+
+
+
+
+
+
+@media (min-width: 820px){
+    .transform{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 49.8%;
+        
+        
+        text-align: start;
+        
+        p{
+            margin: 50px 0;
+            width: 300px;
+        }
+
+        h1{
+            width: 300px;
+        }
+    }
+}
+
+
